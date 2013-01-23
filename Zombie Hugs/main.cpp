@@ -11,7 +11,7 @@ int main()
     // Create the main window
 	sf::RenderWindow window;
 	
-	window.clear();
+	window.clear(sf::Color::Black);
 
 	window.create(sf::VideoMode(1280,720,32), "Zombie Hugs", sf::Style::Fullscreen);
 
@@ -28,11 +28,11 @@ int main()
             if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 			{
                 window.close();			 
-			}			
+			}
         }
 
 
-		game.update(window);
+		game.run(window);
 
         // Update the window
         window.display();

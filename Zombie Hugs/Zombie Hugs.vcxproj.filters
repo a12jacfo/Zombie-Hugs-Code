@@ -8,7 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Enviroment.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Animation.cpp" />
@@ -21,9 +20,10 @@
     <ClCompile Include="ZombieHealer.cpp" />
     <ClCompile Include="ZombieHero.cpp" />
     <ClCompile Include="ZombieStunner.cpp" />
+    <ClCompile Include="Level_One.cpp" />
+    <ClCompile Include="GameState.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enviroment.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Animation.h" />
@@ -37,5 +37,7 @@
     <ClInclude Include="ZombieHealer.h" />
     <ClInclude Include="ZombieHero.h" />
     <ClInclude Include="ZombieStunner.h" />
+    <ClInclude Include="Level_One.h" />
+    <ClInclude Include="GameState.h" />
   </ItemGroup>
 </Project>

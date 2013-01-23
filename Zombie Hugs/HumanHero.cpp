@@ -1,5 +1,4 @@
 #include "HumanHero.h"
-#include "Enviroment.h"
 #include "Tile.h"
 
 #include <string>

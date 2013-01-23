@@ -1,37 +1,27 @@
 #pragma once
-#include <vector>
 
 #include "SFML\Window.hpp"
 #include "SFML\Graphics.hpp"
+#include "GameState.h"
 
 class Tile;
 class GameObject;
 
-class Enviroment
+class Level_One : public GameState
 {
 public:
 	typedef std::vector<Tile*> TileVector;
 	typedef std::vector<GameObject*> HumanVector;
 	typedef std::vector<GameObject*> ZombieVector;
-
-	virtual ~Enviroment();
-	static Enviroment* getInstance();
-	void update(sf::RenderWindow& window);
+	Level_One();
+	~Level_One();
+	void run(sf::RenderWindow& window);
+	void update();
 	TileVector& getTileVector();
-	void setLvl01();
-
-private:
-	static Enviroment* e_instance;	
+private:	
 	void addTile();
-	Enviroment();
-	Enviroment(const Enviroment &em);
-	Enviroment& operator=(const Enviroment &em);
-
 	TileVector mTiles;
 	HumanVector mHumans;
 	ZombieVector mZombies;
-
-	int xPos;
-	int yPos;
 };
 

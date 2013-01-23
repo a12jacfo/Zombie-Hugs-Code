@@ -1,21 +1,28 @@
 #include "Game.h"
-#include "Enviroment.h"
-
-#include <iostream>
-
-Enviroment* e_instance = Enviroment::getInstance();
+#include "Level_One.h"
 
 Game::Game() :
 	gameScore(0.0)
-{
-	e_instance->setLvl01();
+{	 
+	mCurrentGameScreen = addGameState();
 }
 
 Game::~Game()
 {
+	delete mCurrentGameScreen;
 }
 
-void Game::update(sf::RenderWindow &window)
+GameState* Game::addGameState()
 {
-	e_instance->update(window);
+	GameState* gamestate = new Level_One();
+	return gamestate;
+}
+
+void Game::run(sf::RenderWindow &window)
+{
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		mCurrentGameScreen->update();
+	}
+	mCurrentGameScreen->run(window);
 }

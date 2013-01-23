@@ -116,13 +116,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="Enviroment.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HumanCatcher.cpp" />
     <ClCompile Include="HumanHealer.cpp" />
     <ClCompile Include="HumanHero.cpp" />
     <ClCompile Include="HumanStunner.cpp" />
     <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="Level_One.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="ZombieCatcher.cpp" />
@@ -132,7 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
-    <ClInclude Include="Enviroment.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HumanCatcher.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="HumanHero.h" />
     <ClInclude Include="HumanStunner.h" />
     <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="Level_One.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="ZombieCatcher.h" />
     <ClInclude Include="ZombieHealer.h" />

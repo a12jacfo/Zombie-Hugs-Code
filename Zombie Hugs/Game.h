@@ -3,13 +3,18 @@
 #include "SFML\Window.hpp"
 #include "SFML\Graphics.hpp"
 
+class GameState;
+
 class Game
 {
 public:
 	Game();
 	~Game();
-	void update(sf::RenderWindow &window);
+	GameState* addGameState();
+	void update();
+	void run(sf::RenderWindow &window);
 private:
+	GameState* mCurrentGameScreen;
 	float gameScore;
 };
 

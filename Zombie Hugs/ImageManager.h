@@ -7,13 +7,15 @@ class ImageManager
 {
 public:
 	~ImageManager();
-	static ImageManager& getInstance();
+	static ImageManager* getInstance();
 	const sf::Sprite& getGridSprite() const;
 	const sf::Sprite& getZombieHealerSprite() const;
 private:
+	static ImageManager* i_instance;
 	ImageManager();
 	ImageManager(const ImageManager &im);
-	ImageManager& operator=(const ImageManager igm);
+	ImageManager& operator=(const ImageManager &im);
+
 	sf::Texture mHumanHealerTexture;
 	sf::Texture mL01GridTexture;
 	//sf::Texture mHumanCatcherTexture;
