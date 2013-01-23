@@ -21,6 +21,7 @@
     <ClCompile Include="ZombieHealer.cpp" />
     <ClCompile Include="ZombieHero.cpp" />
     <ClCompile Include="ZombieStunner.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enviroment.h" />
@@ -37,5 +38,6 @@
     <ClInclude Include="ZombieHealer.h" />
     <ClInclude Include="ZombieHero.h" />
     <ClInclude Include="ZombieStunner.h" />
+    <ClInclude Include="AudioManger.h" />
   </ItemGroup>
 </Project>
