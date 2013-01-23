@@ -43,7 +43,7 @@ void ZombieCatcher::setDeactive()
 void ZombieCatcher::update(sf::RenderWindow &window)
 {
 	sf::CircleShape cirkel;
-	cirkel.setFillColor(sf::Color::Red);
+	cirkel.setFillColor(sf::Color::Black);
 	cirkel.setPosition(mPos);
 	cirkel.setRadius(30);
 	cirkel.setOrigin(30,30);
