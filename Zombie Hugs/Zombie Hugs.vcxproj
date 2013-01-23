@@ -116,7 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="GameState.cpp" />
+=======
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Enviroment.cpp" />
+>>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HumanCatcher.cpp" />
     <ClCompile Include="HumanHealer.cpp" />
@@ -133,7 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+<<<<<<< HEAD
     <ClInclude Include="GameState.h" />
+=======
+    <ClInclude Include="AudioManger.h" />
+    <ClInclude Include="Enviroment.h" />
+>>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HumanCatcher.h" />

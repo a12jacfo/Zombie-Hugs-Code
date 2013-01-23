@@ -20,8 +20,12 @@
     <ClCompile Include="ZombieHealer.cpp" />
     <ClCompile Include="ZombieHero.cpp" />
     <ClCompile Include="ZombieStunner.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Level_One.cpp" />
     <ClCompile Include="GameState.cpp" />
+=======
+    <ClCompile Include="AudioManager.cpp" />
+>>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tile.h" />
@@ -37,7 +41,11 @@
     <ClInclude Include="ZombieHealer.h" />
     <ClInclude Include="ZombieHero.h" />
     <ClInclude Include="ZombieStunner.h" />
+<<<<<<< HEAD
     <ClInclude Include="Level_One.h" />
     <ClInclude Include="GameState.h" />
+=======
+    <ClInclude Include="AudioManger.h" />
+>>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
   </ItemGroup>
 </Project>
