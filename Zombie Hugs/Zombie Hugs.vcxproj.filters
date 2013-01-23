@@ -1,51 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{e6ab8734-6546-4bac-baf7-89346f129b6f}</UniqueIdentifier>
-      <Extensions>txt</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="HumanCatcher.cpp" />
     <ClCompile Include="HumanHealer.cpp" />
     <ClCompile Include="HumanHero.cpp" />
     <ClCompile Include="HumanStunner.cpp" />
+    <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="ZombieCatcher.cpp" />
     <ClCompile Include="ZombieHealer.cpp" />
     <ClCompile Include="ZombieHero.cpp" />
     <ClCompile Include="ZombieStunner.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="Level_One.cpp" />
-    <ClCompile Include="GameState.cpp" />
-=======
     <ClCompile Include="AudioManager.cpp" />
->>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Level_One.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tile.h" />
-    <ClInclude Include="Game.h" />
     <ClInclude Include="Animation.h" />
-    <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HumanCatcher.h" />
     <ClInclude Include="HumanHealer.h" />
     <ClInclude Include="HumanHero.h" />
     <ClInclude Include="HumanStunner.h" />
+    <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="ZombieCatcher.h" />
     <ClInclude Include="ZombieHealer.h" />
     <ClInclude Include="ZombieHero.h" />
     <ClInclude Include="ZombieStunner.h" />
-<<<<<<< HEAD
-    <ClInclude Include="Level_One.h" />
-    <ClInclude Include="GameState.h" />
-=======
     <ClInclude Include="AudioManger.h" />
->>>>>>> 2f033f81f238944603152fb4fb7163e7996a29cb
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="Level_One.h" />
   </ItemGroup>
 </Project>
