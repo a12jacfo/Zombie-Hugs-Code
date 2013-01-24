@@ -5,7 +5,7 @@
 using namespace std;
 
 HumanHealer::HumanHealer(Tile& tile):
-mName("Lyn"),mMorale(100),mCurrentTile(tile)
+mName("Lyn"),mMorale(100),mCurrentTile(tile), mTyp(HUMAN)
 {
 	mPos= mCurrentTile.getPos();
 }
@@ -16,6 +16,14 @@ int HumanHealer::getMorale()
 {
 	return mMorale;
 }
+void HumanHealer::setMorale(int i)
+{
+	mMorale= mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale=100;
+	}
+}
 string HumanHealer::getName()
 {
 	return mName;
@@ -23,6 +31,21 @@ string HumanHealer::getName()
 sf::Vector2f HumanHealer::getPos()
 {
 	return mPos;
+}
+HumanHealer::Typ HumanHealer::getTyp()
+{
+	return mTyp;
+}
+void HumanHealer::setTyp()
+{
+	if(mTyp == HUMAN)
+	{
+		mTyp = ZOMBIECAPTIVE;
+	}
+	else
+	{
+		mTyp = HUMAN;
+	}
 }
 void HumanHealer::setPos(sf::Vector2f pos)
 {
@@ -49,6 +72,17 @@ void HumanHealer::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void HumanHealer::useAbility()
+void HumanHealer::useAbility(GameObject *g)
 {
+	if(mTyp == HUMAN)
+	{
+		if(g->getTyp() == HUMAN||g->getTyp() == HUMANCAPTIVE)
+		{
+			g->setMorale(25);
+		}
+		if(g->getTyp() == ZOMBIE)
+		{
+			g->setMorale(-10);
+		}
+	}
 }

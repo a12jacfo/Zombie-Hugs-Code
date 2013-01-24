@@ -5,7 +5,7 @@
 using namespace std;
 
 HumanCatcher::HumanCatcher(Tile& tile):
-mName("Leo"), mMorale(100), mCurrentTile(tile)
+mName("Leo"), mMorale(100), mCurrentTile(tile), mTyp(HUMAN)
 {
 	mPos= mCurrentTile.getPos();
 }
@@ -16,9 +16,32 @@ int HumanCatcher::getMorale()
 {
 	return mMorale;
 }
+void HumanCatcher::setMorale(int i)
+{
+	mMorale= mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale=100;
+	}
+}
 string HumanCatcher::getName()
 {
 	return mName;
+}
+HumanCatcher::Typ HumanCatcher::getTyp()
+{
+	return mTyp;
+}
+void HumanCatcher::setTyp()
+{
+	if(mTyp == HUMAN)
+	{
+		mTyp = ZOMBIECAPTIVE;
+	}
+	else
+	{
+		mTyp = HUMAN;
+	}
 }
 sf::Vector2f HumanCatcher::getPos()
 {
@@ -49,6 +72,17 @@ void HumanCatcher::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void HumanCatcher::useAbility()
+void HumanCatcher::useAbility(GameObject *g)
 {
+	if(mTyp == HUMAN)
+	{
+		if(g->getTyp() == ZOMBIE)
+		{
+			int catchChance = rand() % 100+1;
+			if(catchChance > g->getMorale()-1)
+			{
+				g->setTyp();
+			}
+		}
+	}
 }

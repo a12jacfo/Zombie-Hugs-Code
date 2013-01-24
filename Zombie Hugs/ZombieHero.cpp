@@ -16,9 +16,32 @@ int ZombieHero::getMorale()
 {
 	return mMorale;
 }
+void ZombieHero::setMorale(int i)
+{
+	mMorale = mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale = 100;
+	}
+}
 string ZombieHero::getName()
 {
 	return mName;
+}
+ZombieHero::Typ ZombieHero::getTyp()
+{
+	return mTyp;
+}
+void ZombieHero::setTyp()
+{
+	if(mTyp == ZOMBIE)
+	{
+		mTyp = HUMANCAPTIVE;
+	}
+	else
+	{
+		mTyp = ZOMBIE;
+	}
 }
 sf::Vector2f ZombieHero::getPos()
 {
@@ -49,6 +72,6 @@ void ZombieHero::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void ZombieHero::useAbility()
+void ZombieHero::useAbility(GameObject *g)
 {
 }

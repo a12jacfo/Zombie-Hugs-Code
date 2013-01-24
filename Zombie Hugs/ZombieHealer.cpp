@@ -16,9 +16,32 @@ int ZombieHealer::getMorale()
 {
 	return mMorale;
 }
+void ZombieHealer::setMorale(int i)
+{
+	mMorale = mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale = 100;
+	}
+}
 string ZombieHealer::getName()
 {
 	return mName;
+}
+ZombieHealer::Typ ZombieHealer::getTyp()
+{
+	return mTyp;
+}
+void ZombieHealer::setTyp()
+{
+	if(mTyp == ZOMBIE)
+	{
+		mTyp = HUMANCAPTIVE;
+	}
+	else
+	{
+		mTyp = ZOMBIE;
+	}
 }
 sf::Vector2f ZombieHealer::getPos()
 {
@@ -49,6 +72,6 @@ void ZombieHealer::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void ZombieHealer::useAbility()
+void ZombieHealer::useAbility(GameObject *g)
 {
 }

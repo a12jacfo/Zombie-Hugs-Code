@@ -22,9 +22,24 @@ int HumanHero::getMorale()
 {
 	return mMorale;
 }
+void HumanHero::setMorale(int i)
+{
+	mMorale = mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale = 100;
+	}
+}
 string HumanHero::getName()
 {
 	return mName;
+}
+HumanHero::Typ HumanHero::getTyp()
+{
+	return mTyp;
+}
+void HumanHero::setTyp()
+{
 }
 sf::Vector2f HumanHero::getPos()
 {
@@ -55,6 +70,6 @@ void HumanHero::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void HumanHero::useAbility()
+void HumanHero::useAbility(GameObject *g)
 {
 }

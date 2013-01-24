@@ -16,9 +16,32 @@ int ZombieStunner::getMorale()
 {
 	return mMorale;
 }
+void ZombieStunner::setMorale(int i)
+{
+	mMorale = mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale = 100;
+	}
+}
 string ZombieStunner::getName()
 {
 	return mName;
+}
+ZombieStunner::Typ ZombieStunner::getTyp()
+{
+	return mTyp;
+}
+void ZombieStunner::setTyp()
+{
+	if(mTyp == ZOMBIE)
+	{
+		mTyp = HUMANCAPTIVE;
+	}
+	else
+	{
+		mTyp = ZOMBIE;
+	}
 }
 sf::Vector2f ZombieStunner::getPos()
 {
@@ -49,6 +72,6 @@ void ZombieStunner::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void ZombieStunner::useAbility()
+void ZombieStunner::useAbility(GameObject *g)
 {
 }

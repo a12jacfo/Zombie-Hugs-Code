@@ -5,7 +5,7 @@
 using namespace std;
 
 HumanStunner::HumanStunner(Tile& tile):
-mName("Liz"),mMorale(100), mCurrentTile(tile)
+mName("Liz"),mMorale(100), mCurrentTile(tile), mTyp(HUMAN)
 {
 	mPos= mCurrentTile.getPos();
 }
@@ -16,6 +16,14 @@ int HumanStunner::getMorale()
 {
 	return mMorale;
 }
+void HumanStunner::setMorale(int i)
+{
+	mMorale= mMorale+i;
+	if(mMorale>100)
+	{
+		mMorale=100;
+	}
+}
 string HumanStunner::getName()
 {
 	return mName;
@@ -23,6 +31,21 @@ string HumanStunner::getName()
 sf::Vector2f HumanStunner::getPos()
 {
 	return mPos;
+}
+HumanStunner::Typ HumanStunner::getTyp()
+{
+	return mTyp;
+}
+void HumanStunner::setTyp()
+{
+	if(mTyp == HUMAN)
+	{
+		mTyp = ZOMBIECAPTIVE;
+	}
+	else
+	{
+		mTyp = HUMAN;
+	}
 }
 void HumanStunner::setPos(sf::Vector2f pos)
 {
@@ -49,6 +72,7 @@ void HumanStunner::update(sf::RenderWindow &window)
 	cirkel.setOrigin(30,30);
 	window.draw(cirkel);
 }
-void HumanStunner::useAbility()
+void HumanStunner::useAbility(GameObject *g)
 {
+
 }
