@@ -10,26 +10,19 @@ class Tile;
 class HumanHero : public GameObject
 {
 public:
-	HumanHero(Tile& tile);
+	HumanHero(Tile* tile);
 	virtual ~HumanHero();
-	virtual int getMorale();
-	virtual void setMorale(int i);
-	virtual std::string getName();
-	virtual Typ getTyp();
-	virtual void setTyp();
 	virtual sf::Vector2f getPos();
 	virtual void setPos(sf::Vector2f pos);
 	virtual bool getActive();
 	virtual void setActive();
 	virtual void setDeactive();
 	virtual void update(sf::RenderWindow &window);
-	virtual void useAbility(GameObject *g);
+	virtual Tile* getCurrentTile();
+	virtual void setCurrentTile(Tile& newTile);
 private:
-	int mMorale;
-	std::string mName;
 	sf::Vector2f mPos;
 	bool active;
-	Tile& mCurrentTile;
-	Typ mTyp;
+	Tile* mCurrentTile;
 };
 #endif

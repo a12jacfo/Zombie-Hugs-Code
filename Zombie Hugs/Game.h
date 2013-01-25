@@ -11,7 +11,7 @@ public:
 	Game();
 	~Game();
 	GameState* addGameState();
-	void update();
+	void update(sf::RenderWindow& window);
 	void run(sf::RenderWindow &window);
 private:
 	GameState* mCurrentGameScreen;

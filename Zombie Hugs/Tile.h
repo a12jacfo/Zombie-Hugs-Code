@@ -15,8 +15,11 @@ public:
 	sf::Vector2f getPos();
 	sf::Color changeColor(sf::Color);
 	Walls& getVector();
+	void setOccupied(bool occupied);
+	bool getOccupied();
 private:
 	bool mActive;
+	bool mOccupied;
 	sf::Vector2f mPos;
 	sf::Color mTileLineColor;	
 	sf::Color mTileColor;

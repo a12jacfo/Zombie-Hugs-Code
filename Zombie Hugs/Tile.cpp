@@ -1,13 +1,32 @@
 #include "Tile.h"
+#include <iostream>
 
 Tile::Tile(sf::Vector2f position) :
 	mPos(position),
-	mActive(false)
+	mActive(false),
+	mOccupied(false)
 {
 }
 
 Tile::~Tile()
 {
+}
+
+bool Tile::getOccupied()
+{
+	return mOccupied;
+}
+
+void Tile::setOccupied(bool occupied)
+{
+	if(occupied == true)
+	{
+		mOccupied = true;
+	}
+	if(occupied == false)
+	{
+		mOccupied = false;
+	}
 }
 
 bool Tile::getActive()
@@ -23,6 +42,13 @@ void Tile::setActive()
 void Tile::setDeactive()
 {
 	mActive = false;
+	for(Walls::size_type i = 0; i < mWalls.size(); i++)
+	{
+		if(mWalls[i]->getActive() == true)
+		{
+			mWalls[i]->setDeactive();
+		}
+	}
 }
 
 sf::Vector2f Tile::getPos()
@@ -60,6 +86,8 @@ void Tile::update(sf::RenderWindow& window)
 		hex.setFillColor(sf::Color::Transparent);
 	if(mActive == true)
 		hex.setFillColor(sf::Color(133,250,121,50));
+	if(mOccupied == true)
+		hex.setFillColor(sf::Color(255,10,10,50));
 
 	hex.setPosition(mPos);
 

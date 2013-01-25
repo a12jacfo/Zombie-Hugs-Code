@@ -1,53 +1,31 @@
 #include "HumanHero.h"
 #include "Tile.h"
 
-#include <string>
 #include "SFML\System.hpp"
 #include "SFML\Graphics.hpp"
+#include <iostream>
 
 using namespace std;
 
-HumanHero::HumanHero(Tile& tile) :
-	mName("Lou"),
-	mMorale(100),
-	mCurrentTile(tile)
+HumanHero::HumanHero(Tile* tile) :
+	mCurrentTile(tile),
+	active(false)
 {
-	mPos = mCurrentTile.getPos();
-	mCurrentTile.setActive();
+	mPos = mCurrentTile->getPos();
+
 }
 HumanHero::~HumanHero()
 {
 }
-int HumanHero::getMorale()
-{
-	return mMorale;
-}
-void HumanHero::setMorale(int i)
-{
-	mMorale = mMorale+i;
-	if(mMorale>100)
-	{
-		mMorale = 100;
-	}
-}
-string HumanHero::getName()
-{
-	return mName;
-}
-HumanHero::Typ HumanHero::getTyp()
-{
-	return mTyp;
-}
-void HumanHero::setTyp()
-{
-}
+
 sf::Vector2f HumanHero::getPos()
 {
-	mPos = mCurrentTile.getPos();
+	mPos = mCurrentTile->getPos();
 	return mPos;
 }
 void HumanHero::setPos(sf::Vector2f pos)
 {
+	mPos = pos;
 }
 bool HumanHero::getActive()
 {
@@ -56,20 +34,31 @@ bool HumanHero::getActive()
 void HumanHero::setActive()
 {
 	active = true;
+	mCurrentTile->setActive();
 }
 void HumanHero::setDeactive()
 {
 	active = false;
+	mCurrentTile->setDeactive();
+	std::cout << "Spelare av" << std::endl;
 }
 void HumanHero::update(sf::RenderWindow &window)
 {
 	sf::CircleShape cirkel;
 	cirkel.setFillColor(sf::Color::Green);
 	cirkel.setPosition(mPos);
-	cirkel.setRadius(30);
-	cirkel.setOrigin(30,30);
+	cirkel.setRadius(20);
+	cirkel.setOrigin(20,20);
 	window.draw(cirkel);
 }
-void HumanHero::useAbility(GameObject *g)
+
+
+Tile* HumanHero::getCurrentTile()
 {
+	return mCurrentTile;
+}
+
+void HumanHero::setCurrentTile(Tile& newTile)
+{
+	mCurrentTile = &newTile;
 }

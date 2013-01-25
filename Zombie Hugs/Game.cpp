@@ -18,11 +18,12 @@ GameState* Game::addGameState()
 	return gamestate;
 }
 
+void Game::update(sf::RenderWindow& window)
+{
+	mCurrentGameScreen->update(window);
+}
+
 void Game::run(sf::RenderWindow &window)
 {
-	if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
-	{
-		mCurrentGameScreen->update();
-	}
 	mCurrentGameScreen->run(window);
 }

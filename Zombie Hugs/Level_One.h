@@ -15,13 +15,20 @@ public:
 	typedef std::vector<GameObject*> ZombieVector;
 	Level_One();
 	~Level_One();
-	void run(sf::RenderWindow& window);
-	void update();
+	virtual void run(sf::RenderWindow& window);
+	virtual void update(sf::RenderWindow& window);
 	TileVector& getTileVector();
 private:	
 	void addTile();
+	void addNeighbors();
 	TileVector mTiles;
 	HumanVector mHumans;
 	ZombieVector mZombies;
+	
+	GameObject* mActiveUnit;
+	Tile* mActiveTile;
+
+	bool mTargetedUnit;
+	bool mMove;
 };
 
