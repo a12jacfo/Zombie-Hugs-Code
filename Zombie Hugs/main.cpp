@@ -33,7 +33,11 @@ int main()
 				{
 					if (event.mouseButton.button == sf::Mouse::Left)
 					{
-						game.update(window);
+						game.leftMouseClick(window);
+					}
+					if (event.mouseButton.button == sf::Mouse::Right)
+					{
+						game.rightMouseClick(window);
 					}
 				}
         }

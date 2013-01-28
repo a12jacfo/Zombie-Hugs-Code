@@ -17,7 +17,9 @@ public:
 	Walls& getVector();
 	void setOccupied(bool occupied);
 	bool getOccupied();
+	sf::ConvexShape getHex();
 private:
+	sf::ConvexShape hex;
 	bool mActive;
 	bool mOccupied;
 	sf::Vector2f mPos;

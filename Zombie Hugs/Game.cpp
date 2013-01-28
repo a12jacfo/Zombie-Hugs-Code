@@ -18,10 +18,16 @@ GameState* Game::addGameState()
 	return gamestate;
 }
 
-void Game::update(sf::RenderWindow& window)
+void Game::leftMouseClick(sf::RenderWindow& window)
 {
-	mCurrentGameScreen->update(window);
+	mCurrentGameScreen->leftMouseClick(window);
 }
+
+void Game::rightMouseClick(sf::RenderWindow& window)
+{
+	mCurrentGameScreen->rightMouseClick(window);
+}
+
 
 void Game::run(sf::RenderWindow &window)
 {

@@ -8,7 +8,8 @@
 
 Level_One::Level_One() :
 	mTargetedUnit(false),
-	mMove(false)
+	mMoveAbility(false),
+	mMoveUnit(false)
 {
 	addTile();
 	addNeighbors();
@@ -18,15 +19,13 @@ Level_One::Level_One() :
 	mTiles[103]->setOccupied(true);
 
 	HumanHero* humanHero2 = new HumanHero(mTiles[47]);
-	mHumans.push_back(humanHero2);
+	mZombies.push_back(humanHero2);
 	mTiles[47]->setOccupied(true);
 
-	HumanHero* humanHero3 = new HumanHero(mTiles[97]);
-	mHumans.push_back(humanHero3);
-	mTiles[97]->setOccupied(true);
-
-	mActiveUnit = 0;
-	mActiveTile = 0;
+	mActiveUnit = mHumans[0];
+	mActiveUnit->setActive();
+	mActiveTile = mActiveUnit->getCurrentTile();
+	mActiveTile->setActive();
 }
 
 Level_One::~Level_One()
@@ -58,78 +57,45 @@ void Level_One::addTile()
 	}
 }
 
-void Level_One::update(sf::RenderWindow& window)
+
+void Level_One::rightMouseClick(sf::RenderWindow& window)
+{
+	// SHOW SKILL HUD
+	if(mTargetedUnit == false && mActiveUnit->getShowAbilityHud() == false)
+	{
+		mActiveUnit->showAbilityHud();
+	}
+	else
+	{
+		mActiveUnit->hideAbilityHud();
+	}
+}
+
+void Level_One::leftMouseClick(sf::RenderWindow& window)
 {
 	int mPosX = sf::Mouse::getPosition(window).x;
 	int mPosY = sf::Mouse::getPosition(window).y;
 
-	if(mTargetedUnit == true)
+
+	if(mTargetedUnit == true && mActiveUnit->getShowAbilityHud() == true)
 	{
-		for(TileVector::size_type h = 0; h < mActiveUnit->getCurrentTile()->getVector().size(); h++)
+		if(mActiveUnit->getAbility01().getGlobalBounds().contains(mPosX,mPosY))
 		{
-			int r0 = 30;
-			int r1 = 1;
-			int dx = mActiveUnit->getCurrentTile()->getVector()[h]->getPos().x - mPosX;
-			int dy = mActiveUnit->getCurrentTile()->getVector()[h]->getPos().y - mPosY;
-			if(((dx * dx) + (dy * dy) < (r0 + r1)*(r0+r1)))
-			{
-				mActiveTile->setOccupied(false);
-				mActiveTile->setDeactive();
-				mActiveTile = mActiveUnit->getCurrentTile()->getVector()[h];
-				mMove = true;
-			}
-		}		
-	}
-
-	if(mTargetedUnit == true && mMove == true && mActiveTile->getOccupied() == false)
-	{
-		std::cout << "Moving" << std::endl;
-		mActiveTile->setOccupied(true);
-		mActiveUnit->getCurrentTile()->setDeactive();
-		mActiveUnit->setCurrentTile(*mActiveTile);
-		mActiveTile = mActiveUnit->getCurrentTile();
-		for(TileVector::size_type k = 0; k < mActiveTile->getVector().size(); k++)
-		{
-			mActiveTile->getVector()[k]->setActive();
-		}		
-	}
-
-
-	for(HumanVector::size_type i = 0; i < mHumans.size(); i++)
-	{
-		mHumans[i]->getCurrentTile()->setOccupied(true);
-		int r0 = 30;
-		int r1 = 1;
-		int dx = mHumans[i]->getPos().x - mPosX;
-		int dy = mHumans[i]->getPos().y - mPosY;
-		if(((dx * dx) + (dy * dy) < (r0 + r1)*(r0+r1)))
-		{
-			if(mHumans[i] != mActiveUnit && mHumans[i]->getActive() == false)
-			{
-				if(mActiveUnit != 0) 
-				{
-					mActiveUnit->setDeactive();
-				}
-				mActiveUnit = mHumans[i];
-				mActiveUnit->setActive();
-				std::cout << "New Target" << std::endl;
-				mTargetedUnit = true;
-				mActiveTile = mActiveUnit->getCurrentTile();
-				mActiveTile->setOccupied(true);
-
-				for(TileVector::size_type k = 0; k < mActiveTile->getVector().size(); k++)
-				{
-					mActiveTile->getVector()[k]->setActive();
-				}		
-			}
+			mActiveUnit->hideAbilityHud();
+			mMoveAbility = true;
+			
 		}
 	}
 
-	//Finns det en aktiv enhet, move = sant
+	if(mTargetedUnit == true && mActiveUnit->getShowAbilityHud() == false && mMoveAbility == true)
+	{
+	
+	}
 
-	//Om man klickar på en annan enhet aktivera den
-
-	//Flytta den aktiva enheten till den klickade Tilen.
+	if(mTargetedUnit == false)
+	{
+	
+	}
 
 }
 
@@ -744,6 +710,15 @@ void Level_One::addNeighbors()
 	mTiles[x]->getVector().push_back(mTiles[(x-15)]);
 	x++;
 
+	// TILE 70
+	mTiles[x]->getVector().push_back(mTiles[(x-14)]);
+	mTiles[x]->getVector().push_back(mTiles[(x+1)]);
+	mTiles[x]->getVector().push_back(mTiles[(x+15)]);
+	mTiles[x]->getVector().push_back(mTiles[(x+14)]);
+	mTiles[x]->getVector().push_back(mTiles[(x-1)]);
+	mTiles[x]->getVector().push_back(mTiles[(x-15)]);
+	x++;
+
 	//TILE 71
 	mTiles[x]->getVector().push_back(mTiles[(x-14)]);
 	mTiles[x]->getVector().push_back(mTiles[(x+15)]);
@@ -1230,4 +1205,5 @@ void Level_One::addNeighbors()
 	mTiles[x]->getVector().push_back(mTiles[(x-15)]);
 	x++;
 
+	std::cout << x << std::endl;
 }

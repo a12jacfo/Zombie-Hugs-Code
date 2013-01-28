@@ -67,11 +67,14 @@ Tile::Walls& Tile::getVector()
 	return mWalls;
 }
 
+sf::ConvexShape Tile::getHex()
+{
+	return hex;
+}
+
 void Tile::update(sf::RenderWindow& window) 
 {
 	mTileLineColor = sf::Color(236,236,236);
-
-	sf::ConvexShape hex;
 	hex.setPointCount(6);
 	hex.setPoint(0, sf::Vector2f(0, -35));
 	hex.setPoint(1, sf::Vector2f(35, -17.5));

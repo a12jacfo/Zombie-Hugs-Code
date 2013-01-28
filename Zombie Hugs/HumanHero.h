@@ -20,9 +20,20 @@ public:
 	virtual void update(sf::RenderWindow &window);
 	virtual Tile* getCurrentTile();
 	virtual void setCurrentTile(Tile& newTile);
+	virtual void viewAbilities(sf::RenderWindow& window);
+	virtual void showAbilityHud();
+	virtual void hideAbilityHud();
+	virtual bool getShowAbilityHud();
+	virtual sf::CircleShape getAbility01();
 private:
+	sf::CircleShape ability01; // MOVE
+	sf::CircleShape ability02; // HEAL
+	sf::CircleShape ability03; // STUNN
+	sf::CircleShape ability04; // CATCH
+	sf::CircleShape ability05; // DAMGE
 	sf::Vector2f mPos;
-	bool active;
+	bool mActive;
 	Tile* mCurrentTile;
+	bool mShowAbilityHud;
 };
 #endif

@@ -11,7 +11,8 @@ public:
 	Game();
 	~Game();
 	GameState* addGameState();
-	void update(sf::RenderWindow& window);
+	void rightMouseClick(sf::RenderWindow& window);
+	void leftMouseClick(sf::RenderWindow& window);
 	void run(sf::RenderWindow &window);
 private:
 	GameState* mCurrentGameScreen;

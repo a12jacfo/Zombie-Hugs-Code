@@ -16,7 +16,8 @@ public:
 	Level_One();
 	~Level_One();
 	virtual void run(sf::RenderWindow& window);
-	virtual void update(sf::RenderWindow& window);
+	virtual void leftMouseClick(sf::RenderWindow& window);
+	virtual void rightMouseClick(sf::RenderWindow& window);
 	TileVector& getTileVector();
 private:	
 	void addTile();
@@ -29,6 +30,7 @@ private:
 	Tile* mActiveTile;
 
 	bool mTargetedUnit;
-	bool mMove;
+	bool mMoveAbility;
+	bool mMoveUnit;
 };
 

@@ -19,5 +19,10 @@ public:
 	virtual Tile* getCurrentTile() = 0;
 	virtual void setCurrentTile(Tile& newTile) = 0;
 	virtual void update(sf::RenderWindow &window) = 0;
+	virtual void viewAbilities(sf::RenderWindow& window) = 0;
+	virtual void showAbilityHud() = 0;
+	virtual void hideAbilityHud() = 0;
+	virtual bool getShowAbilityHud() = 0;
+	virtual sf::CircleShape getAbility01() = 0;
 };
 #endif
