@@ -7,9 +7,6 @@ ImageManager::ImageManager()
 {
 	mL01GridTexture.loadFromFile("resources/grass_grid.png"); 
 	mL01GridSprite.setTexture(mL01GridTexture);
-
-	mZombieHealerTexture.loadFromFile("resources/ZombieHealer.png"); 
-	mZombieHealerSprite.setTexture(mZombieHealerTexture);
 }
 
 
@@ -32,8 +29,4 @@ const sf::Sprite& ImageManager::getGridSprite() const
 	return mL01GridSprite;
 }
 
-const sf::Sprite& ImageManager::getZombieHealerSprite() const 
-{
-	return mZombieHealerSprite;
-}
 

@@ -16,25 +16,9 @@ private:
 	ImageManager(const ImageManager &im);
 	ImageManager& operator=(const ImageManager &im);
 
-	sf::Texture mHumanHealerTexture;
 	sf::Texture mL01GridTexture;
-	//sf::Texture mHumanCatcherTexture;
-	//sf::Texture mHumanStunnerTexture;
-	//sf::Texture mHumanHeroTexture;
-	//sf::Texture mZombieHeroTexture;
-	//sf::Texture mZombieStunnerTexture;
-	//sf::Texture mZombieCatcherTexture;
-	sf::Texture mZombieHealerTexture;
-
-	sf::Sprite mHumanHealerSprite;
 	sf::Sprite mL01GridSprite;
-	//sf::Sprite mHumanCatcherSprite;
-	//sf::Sprite mHumanStunnerSprite;
-	//sf::Sprite mHumanHeroSprite;
-	sf::Sprite mZombieHealerSprite;
-	//sf::Sprite mZombieCatcherSprite;
-	//sf::Sprite mZombieStunnerSprite;
-	//sf::Sprite mZombieHeroSprite;
+
 
 };
 
