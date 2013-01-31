@@ -32,5 +32,9 @@ private:
 
 	bool mTargetedUnit;
 	bool mMoveAbility;
+	bool mHealAbility;
+	bool mStunnAbility;
+	bool mDamageAbility;
+	bool mCatchAbility;
 };
 

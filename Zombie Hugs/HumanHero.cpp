@@ -10,7 +10,8 @@ using namespace std;
 HumanHero::HumanHero(Tile& tile, std::string name) :
 	mCurrentTile(&tile),
 	mActive(false),
-	mShowAbilityHud(false)
+	mShowAbilityHud(false),
+	mMorale(50)
 {
 	mName = name;
 	mPos = mCurrentTile->getPos();
@@ -65,7 +66,18 @@ void HumanHero::setDeactive()
 	mActive = false;
 	std::cout << "Spelare av" << std::endl;
 }
-
+int HumanHero::getMorale()
+{
+	return mMorale;
+}
+void HumanHero::setMorale(int i)
+{
+	mMorale = mMorale+=i;
+	if(mMorale>100)
+	{
+		mMorale=100;
+	}
+}
 sf::CircleShape HumanHero::getBoundingBox()
 {
 	return cirkel;

@@ -1,13 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
-
+#include <ctime>
+#include <cstdlib>
 #include "Game.h"
 
 int main()
 {
 	Game game;
-
+	srand(time(NULL));
     // Create the main window
 	sf::RenderWindow window;
 	

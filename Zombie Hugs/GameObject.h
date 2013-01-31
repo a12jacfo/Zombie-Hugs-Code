@@ -19,6 +19,8 @@ public:
 	virtual bool getActive() = 0;
 	virtual void setActive() = 0;
 	virtual void setDeactive() = 0;
+	virtual int getMorale() = 0;
+	virtual void setMorale(int i) = 0;
 	virtual void update(sf::RenderWindow &window) = 0;
 	virtual void viewAbilities(sf::RenderWindow& window) = 0;
 	virtual Tile& getCurrentTile() const = 0;

@@ -19,6 +19,8 @@ public:
 	virtual bool getActive();
 	virtual void setActive();
 	virtual void setDeactive();
+	virtual int getMorale();
+	virtual void setMorale(int i);
 	virtual void update(sf::RenderWindow &window);
 	virtual Tile& getCurrentTile() const;
 	virtual void SetCurrentTile(Tile& newtile);
@@ -41,5 +43,6 @@ private:
 	Tile* mCurrentTile;
 	bool mShowAbilityHud;
 	std::string mName;
+	int mMorale;
 };
 #endif
