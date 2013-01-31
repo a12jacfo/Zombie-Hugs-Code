@@ -7,16 +7,40 @@
 
 using namespace std;
 
-HumanHero::HumanHero(Tile* tile) :
-	mCurrentTile(tile),
+HumanHero::HumanHero(Tile& tile, std::string name) :
+	mCurrentTile(&tile),
 	mActive(false),
 	mShowAbilityHud(false)
 {
+	mName = name;
 	mPos = mCurrentTile->getPos();
-
 }
+
 HumanHero::~HumanHero()
 {
+}
+
+HumanHero::Category HumanHero::getCategory()
+{
+	return HUMAN;
+}
+
+void HumanHero::setCategory()
+{
+}
+
+std::string HumanHero::getName()
+{
+	return mName;
+}
+
+Tile& HumanHero::getCurrentTile() const
+{
+	return *mCurrentTile;
+}
+void HumanHero::SetCurrentTile(Tile& newTile)
+{
+	mCurrentTile = &newTile;
 }
 
 sf::Vector2f HumanHero::getPos()
@@ -35,17 +59,20 @@ bool HumanHero::getActive()
 void HumanHero::setActive()
 {
 	mActive = true;
-	mCurrentTile->setActive();
 }
 void HumanHero::setDeactive()
 {
 	mActive = false;
-	mCurrentTile->setDeactive();
 	std::cout << "Spelare av" << std::endl;
 }
+
+sf::CircleShape HumanHero::getBoundingBox()
+{
+	return cirkel;
+}
+
 void HumanHero::update(sf::RenderWindow &window)
 {
-	sf::CircleShape cirkel;
 	if(mActive == true)
 		cirkel.setFillColor(sf::Color::Green);
 	if(mActive == false)
@@ -62,16 +89,6 @@ void HumanHero::update(sf::RenderWindow &window)
 }
 
 
-Tile* HumanHero::getCurrentTile()
-{
-	return mCurrentTile;
-}
-
-void HumanHero::setCurrentTile(Tile& newTile)
-{
-	mCurrentTile = &newTile;
-}
-
 bool HumanHero::getShowAbilityHud()
 {
 	return mShowAbilityHud;
@@ -87,41 +104,65 @@ void HumanHero::hideAbilityHud()
 	mShowAbilityHud = false;
 }
 
-sf::CircleShape HumanHero::getAbility01()
+sf::CircleShape HumanHero::getAbility(std::string abilityName)
 {
-	return ability01;
+	if(abilityName == "move")
+	{
+		return mAbilityMove;
+	}		
+	else if(abilityName == "heal")
+	{
+		return mAbilityHeal;
+	}
+	else if(abilityName == "stunn")
+	{
+		return mAbilityStunn;
+	}
+	else if(abilityName == "catch")
+	{
+		return mAbilityCatch;
+	}
+	else if(abilityName == "damage")
+	{
+		return mAbilityDamage;
+	}
+	else
+	{
+		return mAbilityMove;
+	}
 }
+
 
 void HumanHero::viewAbilities(sf::RenderWindow& window)
 {
-	ability01.setPosition(mPos.x+40,mPos.y-45);
-	ability01.setFillColor(sf::Color::Red);
-	ability01.setRadius(25);
-	ability01.setOrigin(25,25);
+	mAbilityMove.setPosition(mPos.x+40,mPos.y-45);
+	mAbilityMove.setFillColor(sf::Color::Red);
+	mAbilityMove.setRadius(25);
+	mAbilityMove.setOrigin(25,25);
 
-	ability02.setPosition(mPos.x-50,mPos.y+20);
-	ability02.setFillColor(sf::Color::Green);
-	ability02.setRadius(25);
-	ability02.setOrigin(25,25);
+	mAbilityHeal.setPosition(mPos.x-50,mPos.y+20);
+	mAbilityHeal.setFillColor(sf::Color::Green);
+	mAbilityHeal.setRadius(25);
+	mAbilityHeal.setOrigin(25,25);
 
-	ability03.setPosition(mPos.x,mPos.y+55);
-	ability03.setFillColor(sf::Color::Magenta);
-	ability03.setRadius(25);
-	ability03.setOrigin(25,25);
+	mAbilityStunn.setPosition(mPos.x,mPos.y+55);
+	mAbilityStunn.setFillColor(sf::Color::Magenta);
+	mAbilityStunn.setRadius(25);
+	mAbilityStunn.setOrigin(25,25);
 
-	ability04.setPosition(mPos.x+50,mPos.y+20);
-	ability04.setFillColor(sf::Color::White);
-	ability04.setRadius(25);
-	ability04.setOrigin(25,25);
+	mAbilityCatch.setPosition(mPos.x+50,mPos.y+20);
+	mAbilityCatch.setFillColor(sf::Color::White);
+	mAbilityCatch.setRadius(25);
+	mAbilityCatch.setOrigin(25,25);
 
-	ability05.setPosition(mPos.x-45,mPos.y-45);
-	ability05.setFillColor(sf::Color::Yellow);
-	ability05.setRadius(25);
-	ability05.setOrigin(25,25);
+	mAbilityDamage.setPosition(mPos.x-45,mPos.y-45);
+	mAbilityDamage.setFillColor(sf::Color::Yellow);
+	mAbilityDamage.setRadius(25);
+	mAbilityDamage.setOrigin(25,25);
 
-	window.draw(ability01);
-	window.draw(ability02);
-	window.draw(ability03);
-	window.draw(ability04);
-	window.draw(ability05);
+	window.draw(mAbilityMove);
+	window.draw(mAbilityHeal);
+	window.draw(mAbilityStunn);
+	window.draw(mAbilityCatch);
+	window.draw(mAbilityDamage);
 }

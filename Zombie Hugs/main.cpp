@@ -13,7 +13,7 @@ int main()
 	
 	window.clear(sf::Color::Black);
 
-	window.create(sf::VideoMode(1280,720,32), "Zombie Hugs"/*, sf::Style::Fullscreen)*/);
+	window.create(sf::VideoMode(1280,720,32), "Zombie Hugs"/*, sf::Style::Fullscreen*/);
 
 	window.setFramerateLimit(60);
 

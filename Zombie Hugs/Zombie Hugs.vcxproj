@@ -118,7 +118,6 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="HumanHero.cpp" />
     <ClCompile Include="ImageManager.cpp" />

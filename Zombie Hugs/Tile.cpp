@@ -1,10 +1,11 @@
 #include "Tile.h"
 #include <iostream>
 
-Tile::Tile(sf::Vector2f position) :
+Tile::Tile(sf::Vector2f position, int x) :
 	mPos(position),
 	mActive(false),
-	mOccupied(false)
+	mOccupied(false),
+	nr(x)
 {
 }
 
@@ -29,6 +30,10 @@ void Tile::setOccupied(bool occupied)
 	}
 }
 
+int Tile::getNR()
+{
+	return nr;
+}
 bool Tile::getActive()
 {
 	return mActive;
@@ -74,7 +79,7 @@ sf::ConvexShape Tile::getHex()
 
 void Tile::update(sf::RenderWindow& window) 
 {
-	mTileLineColor = sf::Color(236,236,236);
+	mTileLineColor = sf::Color(236,236,236,50);
 	hex.setPointCount(6);
 	hex.setPoint(0, sf::Vector2f(0, -35));
 	hex.setPoint(1, sf::Vector2f(35, -17.5));

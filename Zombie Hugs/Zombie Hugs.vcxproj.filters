@@ -9,7 +9,6 @@
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Level_One.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="HumanHero.cpp" />
   </ItemGroup>
   <ItemGroup>

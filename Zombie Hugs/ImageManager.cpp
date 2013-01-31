@@ -5,7 +5,7 @@ ImageManager * ImageManager::i_instance = 0;
 
 ImageManager::ImageManager()
 {
-	mL01GridTexture.loadFromFile("resources/lvl01_grid_grass_1.png"); 
+	mL01GridTexture.loadFromFile("resources/grass_grid.png"); 
 	mL01GridSprite.setTexture(mL01GridTexture);
 
 	mZombieHealerTexture.loadFromFile("resources/ZombieHealer.png"); 

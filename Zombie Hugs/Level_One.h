@@ -22,6 +22,7 @@ public:
 private:	
 	void addTile();
 	void addNeighbors();
+
 	TileVector mTiles;
 	HumanVector mHumans;
 	ZombieVector mZombies;
@@ -31,6 +32,5 @@ private:
 
 	bool mTargetedUnit;
 	bool mMoveAbility;
-	bool mMoveUnit;
 };
 
