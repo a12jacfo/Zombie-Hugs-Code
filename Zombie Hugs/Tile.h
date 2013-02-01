@@ -6,7 +6,7 @@ class Tile
 {
 public:
 	typedef std::vector<Tile*> Walls;
-	Tile(sf::Vector2f position, int x);
+	Tile(sf::Vector2f position);
 	~Tile();
 	void update(sf::RenderWindow& window);
 	bool getActive();
@@ -18,7 +18,6 @@ public:
 	void setOccupied(bool occupied);
 	bool getOccupied();
 	sf::ConvexShape getHex();
-	int getNR();
 private:
 	sf::ConvexShape hex;
 	bool mActive;
@@ -27,5 +26,4 @@ private:
 	sf::Color mTileLineColor;	
 	sf::Color mTileColor;
 	Walls mWalls;
-	int nr;
 };

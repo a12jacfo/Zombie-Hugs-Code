@@ -1,11 +1,10 @@
 #include "Tile.h"
 #include <iostream>
 
-Tile::Tile(sf::Vector2f position, int x) :
+Tile::Tile(sf::Vector2f position) :
 	mPos(position),
 	mActive(false),
-	mOccupied(false),
-	nr(x)
+	mOccupied(false)
 {
 }
 
@@ -30,10 +29,6 @@ void Tile::setOccupied(bool occupied)
 	}
 }
 
-int Tile::getNR()
-{
-	return nr;
-}
 bool Tile::getActive()
 {
 	return mActive;
@@ -88,14 +83,14 @@ void Tile::update(sf::RenderWindow& window)
 	hex.setPoint(4, sf::Vector2f(-35, 17.5));
 	hex.setPoint(5, sf::Vector2f(-35, -17.5));
 
-	hex.setOutlineColor(mTileLineColor);
+	hex.setOutlineColor(sf::Color::Transparent);
 	hex.setOutlineThickness(2.0f);
 	if(mActive == false)
 		hex.setFillColor(sf::Color::Transparent);
 	if(mActive == true)
-		hex.setFillColor(sf::Color(133,250,121,50));
+		hex.setFillColor(sf::Color(133,250,121,30));
 	if(mOccupied == true)
-		hex.setFillColor(sf::Color(255,10,10,50));
+		hex.setFillColor(sf::Color(255,10,10,20));
 
 	hex.setPosition(mPos);
 

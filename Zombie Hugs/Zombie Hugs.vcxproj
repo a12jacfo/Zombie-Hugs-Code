@@ -122,6 +122,7 @@
     <ClCompile Include="HumanHero.cpp" />
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Level_One.cpp" />
+    <ClCompile Include="Level_One_Tiles.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
@@ -134,6 +135,7 @@
     <ClInclude Include="HumanHero.h" />
     <ClInclude Include="ImageManager.h" />
     <ClInclude Include="Level_One.h" />
+    <ClInclude Include="Level_One_Tiles.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>
   <ItemGroup>
