@@ -138,9 +138,6 @@
     <ClInclude Include="Level_One_Tiles.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Level_One_Tiles.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

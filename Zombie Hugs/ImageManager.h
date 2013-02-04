@@ -1,5 +1,6 @@
 #pragma once
 
+#include <map>
 #include "SFML\Graphics\Sprite.hpp"
 #include "SFML\Graphics\Texture.hpp"
 
@@ -8,17 +9,23 @@ class ImageManager
 public:
 	~ImageManager();
 	static ImageManager* getInstance();
-	const sf::Sprite& getGridSprite() const;
-	const sf::Sprite& getZombieHealerSprite() const;
 private:
 	static ImageManager* i_instance;
 	ImageManager();
 	ImageManager(const ImageManager &im);
 	ImageManager& operator=(const ImageManager &im);
 
-	sf::Texture mL01GridTexture;
-	sf::Sprite mL01GridSprite;
+public:
+	const sf::Texture&	get_image( const std::string& filename );
+	void				delete_image( const sf::Texture& image );
+	void				delete_image( const std::string& filename );
+	void				add_resource_directory( const std::string& directory );
+	void				remove_resource_directory( const std::string& directory );
 
+private:
+	std::map< std::string, sf::Texture > images_;
+	std::vector< std::string > resource_directories_;
+};
 
 };
 

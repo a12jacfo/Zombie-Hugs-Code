@@ -93,9 +93,4 @@
       <UniqueIdentifier>{80812d9d-adb4-4dd1-88a6-9ac28135fb5b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Level_One_Tiles.txt">
-      <Filter>Source Files\States</Filter>
-    </None>
-  </ItemGroup>
 </Project>
