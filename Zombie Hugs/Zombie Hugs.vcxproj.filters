@@ -11,7 +11,7 @@
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
     <ClCompile Include="HumanHero.cpp">
-      <Filter>Characters</Filter>
+      <Filter>Source Files\Characters</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\States</Filter>
@@ -34,7 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HumanHero.h">
-      <Filter>Characters</Filter>
+      <Filter>Source Files\Characters</Filter>
     </ClInclude>
     <ClInclude Include="Animation.h">
       <Filter>Header Files\Managers</Filter>
@@ -65,9 +65,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Characters">
-      <UniqueIdentifier>{18becc1d-a8cb-4eef-8f6f-a1f1cfb1dc53}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{9f6c55ee-ee12-47cc-8cb2-270e7990f703}</UniqueIdentifier>
     </Filter>
@@ -91,6 +88,9 @@
     </Filter>
     <Filter Include="Source Files\Game">
       <UniqueIdentifier>{80812d9d-adb4-4dd1-88a6-9ac28135fb5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{18becc1d-a8cb-4eef-8f6f-a1f1cfb1dc53}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

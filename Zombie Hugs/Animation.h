@@ -15,12 +15,11 @@ public:
 	void setPosition(const sf::Vector2f& position);
 	const sf::Sprite& getSprite() const;
 private:
-
-	sf::Clock mFrameTimer;
-	sf::Texture mTexture;
-	sf::Sprite mSprite;
-	int mTimePerFrame;
-	int mNumFrames;
-	int mCurrentFrame;
+	sf::Clock m_frameTimer;
+	sf::Texture m_texture;
+	sf::Sprite m_sprite;
+	int m_timePerFrame;
+	int m_numFrames;
+	int m_currentFrame;
 };
 
