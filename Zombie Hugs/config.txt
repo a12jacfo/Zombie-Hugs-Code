@@ -1,0 +1,15 @@
+m_Action_Points = 12
+m_Move_Cost	= 1
+m_Heal_Cost = 1
+m_Catch_Cost = 1
+m_Stunn_Cost_Unit = 1
+m_Damage_Const = 1
+m_Call_In_Hero_Cost = 1
+m_Stunn_Duration_Ground = 2
+m_Stunn_SuccessRate_Unit = 50
+m_Damage_Amount = 33
+m_Heal_Amount = 25
+m_Catch_Fail_Drain = 12
+m_Moral_After_Convertion = 50
+m_Heal_In_Base_Per_Turn = 10
+m_Move_After_Ability_Used = 2;

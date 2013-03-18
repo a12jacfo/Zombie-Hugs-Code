@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_One_Tiles.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="HudManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="AbilityManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIElement.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIAbilityButton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Stunn.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanHero.cpp">
+      <Filter>Source Files\Characters\Humans</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanCatcher.cpp">
+      <Filter>Source Files\Characters\Humans</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanHealer.cpp">
+      <Filter>Source Files\Characters\Humans</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanStunner.cpp">
+      <Filter>Source Files\Characters\Humans</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieStunner.cpp">
+      <Filter>Source Files\Characters\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieHero.cpp">
+      <Filter>Source Files\Characters\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieHealer.cpp">
+      <Filter>Source Files\Characters\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieCatcher.cpp">
+      <Filter>Source Files\Characters\Zombie</Filter>
+    </ClCompile>
+    <ClCompile Include="SideHUD.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIButtonEndTurn.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Two_Tiles.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="splash.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_One_Tiles.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="HudManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="AbilityManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIElement.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIAbilityButton.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Stunn.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanHero.h">
+      <Filter>Header Files\Characters\Humans</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanStunner.h">
+      <Filter>Header Files\Characters\Humans</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanCatcher.h">
+      <Filter>Header Files\Characters\Humans</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanHealer.h">
+      <Filter>Header Files\Characters\Humans</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieStunner.h">
+      <Filter>Header Files\Characters\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieCatcher.h">
+      <Filter>Header Files\Characters\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieHealer.h">
+      <Filter>Header Files\Characters\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieHero.h">
+      <Filter>Header Files\Characters\Zombie</Filter>
+    </ClInclude>
+    <ClInclude Include="SideHUD.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIButtonEndTurn.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigFile.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Two_Tiles.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="splash.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9f6c55ee-ee12-47cc-8cb2-270e7990f703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1aa5f6b8-faeb-404c-b0b5-674fb1d71471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{43af164f-405d-4f9c-857f-82f395529f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{10997445-f330-42bf-be68-f82e25246490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{c059c6a0-a002-44d0-9410-1fa8ac4ad2ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States">
+      <UniqueIdentifier>{2e8832f4-80e6-42bb-8ab9-335937c8bb0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{665e8760-1d25-4e98-b344-08d0782005d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{80812d9d-adb4-4dd1-88a6-9ac28135fb5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{18becc1d-a8cb-4eef-8f6f-a1f1cfb1dc53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{fd0d03bc-aa4f-4a93-965a-50dcddd6cc26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{f2653814-a8aa-4e53-a41e-c1721d777a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\Humans">
+      <UniqueIdentifier>{ce2a4a5a-771e-46bf-a430-3d214587ade4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters">
+      <UniqueIdentifier>{8f6ef102-5601-479b-ad89-62eaba2e71d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters\Humans">
+      <UniqueIdentifier>{03c4c88b-663e-4840-ac0f-29589bc25656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\Zombie">
+      <UniqueIdentifier>{7053c144-8e77-4d3e-82d9-16136ad82702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters\Zombie">
+      <UniqueIdentifier>{eea518f0-da0f-4e0d-82ad-00bd538453f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.txt">
+      <Filter>Source Files\Game</Filter>
+    </None>
+  </ItemGroup>
+</Project>
