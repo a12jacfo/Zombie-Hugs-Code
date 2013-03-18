@@ -145,3 +145,9 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+# EXTRA
+*.ogg
+*.png
+*.psd
+*.wav
